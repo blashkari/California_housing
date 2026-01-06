@@ -26,8 +26,7 @@ from sklearn.model_selection import cross_validate
 from sklearn.model_selection import ShuffleSplit
 
 cv = ShuffleSplit(n_splits=40, test_size=0.3, random_state=0)
-cv_results = cross_validate(
-    regressor, data, target, cv=cv, scoring="neg_mean_absolute_error")
+cv_results = cross_validate(regressor, data, target, cv=cv, scoring="neg_mean_absolute_error")
 ```
 Note that `cv_results` is a Python dictionary data type.
 
